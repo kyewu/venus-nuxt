@@ -1,11 +1,11 @@
-export const useCountStore = defineStore("count", {
+export const useCountStore = defineStore('count', {
   state: () => ({
     count: 0,
   }),
   actions: {
     increment() {
-      this.count++;
+      this.count++
     },
   },
   persist: true, // Enable persistence
-});
+})

@@ -1,13 +1,9 @@
 <script setup lang="ts">
-
+definePageMeta({
+  layout: '404',
+})
 </script>
 
 <template>
-  <div>
-    about
-  </div>
+  <p>Not Found</p>
 </template>
-
-<style scoped>
-
-</style>

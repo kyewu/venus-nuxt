@@ -4,5 +4,8 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
   // Your custom configs here
-  antfu(),
+  antfu({
+    typescript: true,
+    vue: true,
+  }),
 )

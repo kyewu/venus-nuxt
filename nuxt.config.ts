@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import process from 'node:process'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
@@ -11,13 +12,16 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/nuxt',
     '@vite-pwa/nuxt',
-    '@nuxt/content'
+    '@nuxt/content',
   ],
   pinia: {
     autoImports: [
       'defineStore', // import { defineStore } from 'pinia'
-      'storeToRefs' // import { storeToRefs } from 'pinia'
-    ]
+      'storeToRefs', // import { storeToRefs } from 'pinia'
+    ],
   },
-  pwa: {}
+  pwa: {},
+  devServer: {
+    port: Number.parseInt(process.env.PORT || ''),
+  },
 })
