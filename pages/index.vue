@@ -13,12 +13,16 @@ const partners = ref([
   'https://wayearn.static.toimc.com/partner/logo6.png',
   'https://wayearn.static.toimc.com/partner/logo7.png',
 ])
+const selectedItem: Ref<SwiperItemType> = ref({} as SwiperItemType)
 
-useAsyncData(async () => {
-  await homeStore.fetchData()
-  // eslint-disable-next-line ts/no-use-before-define
-  selectedItem.value = homeStore['swiper-projects'][0]
-})
+await homeStore.fetchData()
+selectedItem.value = homeStore['swiper-projects'][0]
+
+// useAsyncData(async () => {
+//   await homeStore.fetchData()
+//   // eslint-disable-next-line ts/no-use-before-define
+//   selectedItem.value = homeStore['swiper-projects'][0]
+// })
 
 onMounted(() => {
   // useRegisterSW({
@@ -32,8 +36,6 @@ onMounted(() => {
   //   },
   // })
 })
-
-const selectedItem: Ref<SwiperItemType> = ref({} as SwiperItemType)
 
 function onActiveIndexChange(index: number) {
   selectedItem.value = homeStore['swiper-projects'][index]

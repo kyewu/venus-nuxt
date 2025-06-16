@@ -22,6 +22,12 @@ export default defineNuxtConfig({
   },
   pwa: {},
   devServer: {
-    port: Number.parseInt(process.env.PORT || ''),
+    port: 3010,
+  },
+  runtimeConfig: {
+    public: {
+      apiPrefix: process.env.API_PREFIX,
+      baseApiURL: process.env.BASE_API_URL,
+    },
   },
 })
