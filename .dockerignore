@@ -1,0 +1,24 @@
+# 依赖和缓存
+node_modules
+.pnpm-store
+.cache
+
+# 构建产物
+.output
+.nuxt
+dist
+
+# 系统文件
+.git
+.DS_Store
+.idea
+.vscode
+
+# 日志和环境变量
+*.log
+.env
+.env.*
+
+# 测试文件
+coverage
+test
